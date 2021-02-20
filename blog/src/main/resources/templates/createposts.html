@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a new blog</title>
+</head>
+<body>
+<h1>My micro's blog</h1>
+<form action="#" th:action=@{/createposts} method="POST" th:object="${posts}">
+    <input type="text" th:field="*{title}"/><br/>
+    <textarea cols="25" rows="5" th:field="content"></textarea><br/>
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>
