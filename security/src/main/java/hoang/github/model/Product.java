@@ -1,4 +1,4 @@
-package hoang.github.security.model;
+package hoang.github.model;
 
 public class Product {
     private String name;

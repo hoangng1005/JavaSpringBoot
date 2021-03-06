@@ -1,4 +1,4 @@
-package hoang.github.security;
+package hoang.github;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

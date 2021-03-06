@@ -1,6 +1,6 @@
-package hoang.github.security.controller;
+package hoang.github.controller;
 
-import hoang.github.security.model.Product;
+import hoang.github.model.Product;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
