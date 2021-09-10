@@ -31,8 +31,6 @@ import vn.techmaster.blog.service.IAuthenService;
 import vn.techmaster.blog.service.IPostService;
 import vn.techmaster.blog.service.PostException;
 
-
-
 @Controller
 public class PostController {
   @Autowired private IAuthenService authenService;

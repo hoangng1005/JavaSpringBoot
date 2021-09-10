@@ -17,6 +17,8 @@ import org.hibernate.annotations.NaturalId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity(name = "user")
 @Table(name = "users")  //Để không bị lỗi khi kết nối vào Postgresql
@@ -35,6 +37,15 @@ public class User {
 
   @Column(nullable = false)
   private String password;
+
+  private final List<GrantedAuthority> authorities = new ArrayList<>();
+
+  public void setAuthority(String ... stringAuthorities) {
+    for (String authority : stringAuthorities) {
+      //this.authorities.add(new Authority(authority)); cách này cũng được
+      this.authorities.add(() -> authority);
+    }
+  }
 
   //Một User viết nhiều Post
   @OneToMany(
